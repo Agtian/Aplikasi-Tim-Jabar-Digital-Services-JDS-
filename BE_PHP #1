@@ -1,0 +1,15 @@
+<?php
+class Palindrome
+{
+    public static function isPalindrome($word)
+    {
+		$temp = '';
+		$word = lcfirst($word);
+        
+		$length = strlen($word);
+		for ($i = $length; $i >= 0; --$i) {
+			@$temp .= $word[$i];	
+		}
+		return (strtolower($word) === strtolower(strrev($word)));
+    }
+}
